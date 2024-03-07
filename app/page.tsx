@@ -1,4 +1,4 @@
-import Blog from "./components/Blog";
+import BlogLanding from "./components/BlogLanding";
 import Contact from "./components/Contact";
 import Cta from "./components/Cta";
 import Description from "./components/Description";
@@ -11,7 +11,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Description />
-      <Blog />
+      <BlogLanding />
       <Contact />
       <Cta />
     </main>
