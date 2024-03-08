@@ -73,7 +73,7 @@ function Hero() {
           </div>
         );
       })}
-      <div className="absolute bottom-8 lg:bottom-12 inset-x-0 flex justify-center items-center gap-3">
+      <div className="absolute bottom-12 inset-x-0 flex justify-center items-center gap-3">
         {CAROUSEL_DATA.map((data, index) => (
           <span
             key={data.title}

@@ -18,7 +18,7 @@ function BlogLanding() {
             width={1000}
             height={1000}
             priority
-            className="w-[120px] h-[120px] lg:w-full lg:h-[330px] object-cover rounded"
+            className="w-[120px] h-[120px] lg:w-full lg:h-[330px] object-cover rounded-md"
           />
           <div>
             <h3 className="font-medium mb-2 lg:text-xl">
@@ -34,7 +34,7 @@ function BlogLanding() {
             width={1000}
             height={1000}
             priority
-            className="w-[120px] h-[120px] lg:w-full lg:h-[330px] object-cover rounded"
+            className="w-[120px] h-[120px] lg:w-full lg:h-[330px] object-cover rounded-md"
           />
           <div>
             <h3 className="font-medium mb-2 lg:text-xl">
@@ -50,7 +50,7 @@ function BlogLanding() {
             width={1000}
             height={1000}
             priority
-            className="w-[120px] h-[120px] lg:w-full lg:h-[330px] object-cover rounded"
+            className="w-[120px] h-[120px] lg:w-full lg:h-[330px] object-cover rounded-md"
           />
           <div>
             <h3 className="font-medium mb-2 lg:text-xl">

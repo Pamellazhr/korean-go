@@ -3,8 +3,10 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { List } from "@phosphor-icons/react";
+import { useTogglerContext } from "../context/TogglerProvider";
 
 function Header() {
+  const { setMobileNavbar } = useTogglerContext();
   const [style, setStyle] = useState({
     style1: "py-8 bg-transparent text-white",
     style2: "after:bg-white",
@@ -65,13 +67,16 @@ function Header() {
           Blog
         </Link>
       </div>
-      <Link
-        href="/contact"
-        className={`${style.style3} border-2 py-2 px-4 rounded hidden lg:inline-block`}
+      <a
+        href="#contact"
+        className={`${style.style3} border-2 py-2 px-4 rounded-md hidden lg:inline-block`}
       >
         Contact Us
-      </Link>
-      <button className="text-[2.75rem] lg:hidden">
+      </a>
+      <button
+        onClick={() => setMobileNavbar(true)}
+        className="text-[2.75rem] lg:hidden"
+      >
         <List />
       </button>
     </section>

@@ -43,7 +43,7 @@ function Description() {
           priority
           className="lg:w-[375px] lg:h-[260px] object-cover"
         />
-        <p className="text-[#363939] hidden lg:block text-lg w-[680px] bg-white p-6 rounded border border-[#7c7c7c50] shadow-lg">
+        <p className="text-[#363939] hidden lg:block text-lg w-[680px] bg-white p-6 rounded-md border border-[#7c7c7c50] shadow-lg">
           We specialise in providing curious travellers with access to regions
           and communities that would otherwise prove challenging. We are
           committed to offering unique travel opportunities, to unusual

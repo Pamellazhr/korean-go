@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Poppins } from "next/font/google";
+import { TogglerProvider } from "./context/TogglerProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -18,10 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`overflow-x-hidden ${poppins.className}`}>
-        {children}
-      </body>
-    </html>
+    <TogglerProvider>
+      <html lang="en" className="scroll-smooth">
+        <body className={`overflow-x-hidden ${poppins.className}`}>
+          {children}
+        </body>
+      </html>
+    </TogglerProvider>
   );
 }
