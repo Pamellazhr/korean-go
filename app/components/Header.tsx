@@ -5,12 +5,14 @@ import React, { useEffect, useState } from "react";
 import { List } from "@phosphor-icons/react";
 import { useTogglerContext } from "../context/TogglerProvider";
 
-function Header() {
+function Header({ transparent }: { transparent?: boolean }) {
   const { setMobileNavbar } = useTogglerContext();
   const [style, setStyle] = useState({
-    style1: "py-8 bg-transparent text-white",
-    style2: "after:bg-white",
-    style3: "border-white",
+    style1: `py-8 ${
+      transparent ? "bg-transparent text-white" : "bg-white text-black"
+    }`,
+    style2: transparent ? "after:bg-white" : "after:bg-black",
+    style3: transparent ? "border-white" : "border-black",
   });
 
   useEffect(() => {
@@ -25,10 +27,13 @@ function Header() {
               style3: "border-black",
             }
           : {
-              style1: "py-8 bg-transparent text-white",
-
-              style2: "after:bg-white",
-              style3: "border-white",
+              style1: `py-8 ${
+                transparent
+                  ? "bg-transparent text-white"
+                  : "bg-white text-black"
+              }`,
+              style2: transparent ? "after:bg-white" : "after:bg-black",
+              style3: transparent ? "border-white" : "border-black",
             }
       );
     };

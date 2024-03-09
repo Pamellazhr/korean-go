@@ -10,7 +10,7 @@ import MobileNavbar from "./components/MobileNavbar";
 export default function Home() {
   return (
     <main>
-      <Header />
+      <Header transparent />
       <MobileNavbar />
       <Hero />
       <Description />

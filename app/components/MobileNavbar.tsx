@@ -1,7 +1,6 @@
 "use client";
 
 import { X } from "@phosphor-icons/react";
-import Link from "next/link";
 import React from "react";
 import { useTogglerContext } from "../context/TogglerProvider";
 
@@ -40,7 +39,7 @@ function MobileNavbar() {
           Home
         </button>
         <a
-          href="/"
+          href="/gallery"
           className="border-b border-[#A83949] text-center pb-4"
           onClick={() => {
             setMobileNavbar(false);
@@ -49,7 +48,7 @@ function MobileNavbar() {
           Gallery
         </a>
         <a
-          href="/"
+          href="/blog"
           className="border-b border-[#A83949] text-center pb-4"
           onClick={() => {
             setMobileNavbar(false);
