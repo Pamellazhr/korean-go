@@ -58,7 +58,7 @@ function MobileNavbar() {
         </a>
       </div>
       <a
-        href="#contact"
+        href="/#contact"
         className="w-full py-3 text-lg border-2 border-black text-center rounded-md"
         onClick={() => {
           setMobileNavbar(false);

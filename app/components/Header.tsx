@@ -73,7 +73,7 @@ function Header({ transparent }: { transparent?: boolean }) {
         </Link>
       </div>
       <a
-        href="#contact"
+        href="/#contact"
         className={`${style.style3} border-2 py-2 px-4 rounded-md hidden lg:inline-block`}
       >
         Contact Us

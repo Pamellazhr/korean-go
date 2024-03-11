@@ -27,7 +27,7 @@ function Footer() {
       />
       <div className="mb-16 lg:mb-48 lg:flex gap-60">
         <div className="flex flex-col gap-4 items-center lg:items-start mb-16 lg:mb-0">
-          <h3 className="text-2xl lg:text-3xl font-semibold">
+          <h3 className="text-3xl lg:text-4xl font-semibold">
             Japan<span className="text-[#A83949]">Trip</span>
           </h3>
           <p className="font-light lg:text-lg">
@@ -37,10 +37,10 @@ function Footer() {
         <div className="lg:flex gap-32">
           <div className="flex flex-col gap-4 items-center lg:items-start mb-16 lg:mb-0">
             <h3 className="font-semibold text-2xl lg:font-bold">Products</h3>
-            <Link href="/" className="hover:underline lg:text-lg">
+            <Link href="/gallery" className="hover:underline lg:text-lg">
               Gallery
             </Link>
-            <Link href="/" className="hover:underline lg:text-lg">
+            <Link href="/blog" className="hover:underline lg:text-lg">
               Blog
             </Link>
           </div>
@@ -49,9 +49,9 @@ function Footer() {
             <Link href="/" className="hover:underline lg:text-lg">
               Career
             </Link>
-            <Link href="/" className="hover:underline lg:text-lg">
+            <a href="/#contact" className="hover:underline lg:text-lg">
               Contact
-            </Link>
+            </a>
           </div>
         </div>
       </div>
