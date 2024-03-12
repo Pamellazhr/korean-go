@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import { TogglerProvider } from "./context/TogglerProvider";
+import { FirebaseProvider } from "./context/FirebaseProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -19,12 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <TogglerProvider>
-      <html lang="en" className="scroll-smooth">
-        <body className={`overflow-x-hidden ${poppins.className}`}>
-          {children}
-        </body>
-      </html>
-    </TogglerProvider>
+    <FirebaseProvider>
+      <TogglerProvider>
+        <html lang="en" className="scroll-smooth">
+          <body className={`overflow-x-hidden ${poppins.className}`}>
+            {children}
+          </body>
+        </html>
+      </TogglerProvider>
+    </FirebaseProvider>
   );
 }
