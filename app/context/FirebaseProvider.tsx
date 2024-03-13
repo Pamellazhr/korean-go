@@ -13,11 +13,15 @@ import { db } from "../firebase";
 type FirebaseContextType = {
   contact: DocumentData[];
   setContact: React.Dispatch<React.SetStateAction<DocumentData[]>>;
+  blog: DocumentData[];
+  setBlog: React.Dispatch<React.SetStateAction<DocumentData[]>>;
 };
 
 const FirebaseContext = React.createContext<FirebaseContextType>({
   contact: [],
   setContact: () => {},
+  blog: [],
+  setBlog: () => {},
 });
 
 export const useFirebaseContext = () => useContext(FirebaseContext);
@@ -28,6 +32,7 @@ export const FirebaseProvider = ({
   children: React.ReactNode;
 }) => {
   const [contact, setContact] = useState<DocumentData[]>([]);
+  const [blog, setBlog] = useState<DocumentData[]>([]);
 
   useEffect(() => {
     const q = query(collection(db, "contact"), orderBy("time", "desc"));
@@ -42,14 +47,24 @@ export const FirebaseProvider = ({
   }, []);
 
   useEffect(() => {
-    console.log(contact);
-  }, [contact]);
+    const q = query(collection(db, "blog"), orderBy("time", "desc"));
+
+    return onSnapshot(q, (querySnapshot) => {
+      setBlog(
+        querySnapshot.docs.map((doc) => {
+          return { id: doc.id, ...doc.data() };
+        })
+      );
+    });
+  }, []);
 
   return (
     <FirebaseContext.Provider
       value={{
         contact,
         setContact,
+        blog,
+        setBlog,
       }}
     >
       {children}

@@ -12,7 +12,7 @@ function AdminContact() {
       className="mt-28 lg:mt-20 p-8 lg:p-16 relative overflow-x-auto"
     >
       <h1 className="text-[#A32F3F] text-center font-bold text-2xl lg:text-3xl mb-12">
-        Basmallah List of Contacts
+        List of Contacts
       </h1>
       <table className="w-full text-left text-gray-500">
         <thead className="text-gray-700 uppercase bg-gray-50">

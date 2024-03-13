@@ -5,6 +5,7 @@ import {
   collection,
   serverTimestamp,
 } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCkY5TV86nGY7fvE0lvNi5N1i4SSDHSMUg",
@@ -16,6 +17,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+const storage = getStorage(app);
 const db = getFirestore(app);
 
 async function sendContact(name: string, email: string, message: string) {
@@ -31,4 +33,17 @@ async function sendContact(name: string, email: string, message: string) {
   }
 }
 
-export { db, sendContact };
+async function sendBlog(title: string, thumbnail: string, content: string) {
+  try {
+    await addDoc(collection(db, "blog"), {
+      title: title,
+      thumbnail: thumbnail,
+      content: content,
+      time: serverTimestamp(),
+    });
+  } catch (e) {
+    alert(e);
+  }
+}
+
+export { storage, db, sendContact, sendBlog };
