@@ -20,30 +20,4 @@ const app = initializeApp(firebaseConfig);
 const storage = getStorage(app);
 const db = getFirestore(app);
 
-async function sendContact(name: string, email: string, message: string) {
-  try {
-    await addDoc(collection(db, "contact"), {
-      name: name,
-      email: email,
-      message: message,
-      time: serverTimestamp(),
-    });
-  } catch (e) {
-    alert(e);
-  }
-}
-
-async function sendBlog(title: string, thumbnail: string, content: string) {
-  try {
-    await addDoc(collection(db, "blog"), {
-      title: title,
-      thumbnail: thumbnail,
-      content: content,
-      time: serverTimestamp(),
-    });
-  } catch (e) {
-    alert(e);
-  }
-}
-
-export { storage, db, sendContact, sendBlog };
+export { storage, db };

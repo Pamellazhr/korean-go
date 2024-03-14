@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { sendContact } from "../firebase";
 import { useRouter } from "next/navigation";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { db } from "../firebase";
 
 function Contact() {
   const router = useRouter();
@@ -11,6 +12,19 @@ function Contact() {
     email: "",
     message: "",
   });
+
+  async function sendContact(name: string, email: string, message: string) {
+    try {
+      await addDoc(collection(db, "contact"), {
+        name: name,
+        email: email,
+        message: message,
+        time: serverTimestamp(),
+      });
+    } catch (e) {
+      alert(e);
+    }
+  }
 
   return (
     <section id="contact" className="px-8 py-24 lg:w-[650px] lg:mx-auto">

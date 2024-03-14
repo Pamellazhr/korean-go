@@ -6,15 +6,17 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { useFirebaseContext } from "../context/FirebaseProvider";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
-import { sendBlog, storage } from "../firebase";
+import { db, storage } from "../firebase";
 import { useRouter } from "next/navigation";
 import { Plus } from "@phosphor-icons/react";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 
 function AdminBlog({ page }: { page: "home" | "new" }) {
   const router = useRouter();
   const { blog } = useFirebaseContext();
   const [inputValue, setInputValue] = useState({
     title: "",
+    place: "",
     thumbnail: "",
   });
   const [quillValue, setQuillValue] = useState("");
@@ -38,24 +40,40 @@ function AdminBlog({ page }: { page: "home" | "new" }) {
     );
   }
 
+  async function sendBlog(
+    title: string,
+    place: string,
+    thumbnail: string,
+    content: string
+  ) {
+    try {
+      await addDoc(collection(db, "blog"), {
+        title: title,
+        place: place,
+        thumbnail: thumbnail,
+        content: content,
+        time: serverTimestamp(),
+      });
+    } catch (e) {
+      alert(e);
+    }
+  }
+
   return (
     <section id="admin-blog" className="mt-28 lg:mt-20 p-8 lg:p-16">
-      <div className="flex justify-between items-center mb-12">
-        <div></div>
-        <h1 className="text-[#A32F3F] text-center font-bold text-2xl lg:text-3xl">
-          {page === "home" && "Blog"}
-          {page === "new" && "New Blog"}
-        </h1>
-        <Link
-          href="/admin/blog/new"
-          className="p-2 bg-[#A32F3F] text-white rounded-md text-xl"
-        >
-          <Plus weight="bold" />
-        </Link>
-      </div>
+      <h1 className="text-[#A32F3F] text-center font-bold text-2xl lg:text-3xl mb-12">
+        {page === "home" && "Blog"}
+        {page === "new" && "New Blog"}
+      </h1>
 
       {page === "home" && (
-        <section id="home">
+        <section id="home" className="relative">
+          <Link
+            href="/admin/blog/new"
+            className="p-2 bg-[#A32F3F] text-white rounded-md text-xl absolute -top-[5.5rem] right-0"
+          >
+            <Plus weight="bold" />
+          </Link>
           {blog.length === 0 ? (
             <div className="flex flex-col items-center justify-center text-center gap-8 py-16">
               <h1>You haven't written any blog.</h1>
@@ -84,7 +102,8 @@ function AdminBlog({ page }: { page: "home" | "new" }) {
                           year: "numeric",
                           month: "short",
                           day: "2-digit",
-                          timeZone: "UTC",
+                          hour: "2-digit",
+                          minute: "2-digit",
                         }
                       )}
                     </h4>
@@ -118,6 +137,23 @@ function AdminBlog({ page }: { page: "home" | "new" }) {
             </div>
             <div className="flex flex-col gap-4">
               <label
+                htmlFor="place"
+                className="text-xl font-medium text-[#A83949]"
+              >
+                Place
+              </label>
+              <input
+                value={inputValue.place}
+                onChange={(e) =>
+                  setInputValue({ ...inputValue, place: e.target.value })
+                }
+                type="text"
+                id="place"
+                className="text-lg p-4 border border-[#7c7c7c] rounded-md"
+              />
+            </div>
+            <div className="flex flex-col gap-4">
+              <label
                 htmlFor="thumbnail"
                 className="text-xl font-medium text-[#A83949]"
               >
@@ -140,14 +176,21 @@ function AdminBlog({ page }: { page: "home" | "new" }) {
                 onClick={() => {
                   if (
                     !inputValue.title ||
+                    !inputValue.place ||
                     !inputValue.thumbnail ||
                     !quillValue
                   ) {
                     return alert("Please fill all the fields.");
                   }
-                  sendBlog(inputValue.title, inputValue.thumbnail, quillValue);
+                  sendBlog(
+                    inputValue.title,
+                    inputValue.place,
+                    inputValue.thumbnail,
+                    quillValue
+                  );
                   setInputValue({
                     title: "",
+                    place: "",
                     thumbnail: "",
                   });
                   setQuillValue("");

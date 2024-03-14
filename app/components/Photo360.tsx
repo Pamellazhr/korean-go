@@ -28,26 +28,6 @@ function Photo360({ id }: { id: string }) {
   ];
 
   useEffect(() => {
-    var setMode = function () {
-      if (mql.matches) {
-        document.body.classList.remove("desktop");
-        document.body.classList.add("mobile");
-      } else {
-        document.body.classList.remove("mobile");
-        document.body.classList.add("desktop");
-      }
-    };
-    var mql = matchMedia("(max-width: 500px), (max-height: 500px)");
-    setMode();
-    mql.addListener(setMode);
-
-    // Detect whether we are on a touch device.
-    document.body.classList.add("no-touch");
-    window.addEventListener("touchstart", function () {
-      document.body.classList.remove("no-touch");
-      document.body.classList.add("touch");
-    });
-
     // Viewer options.
     var viewerOpts = {
       controls: {
