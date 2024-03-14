@@ -6,7 +6,7 @@ import { useFirebaseContext } from "../context/FirebaseProvider";
 function DetailBlog({ id }: { id: string }) {
   const { blog } = useFirebaseContext();
 
-  const blogDetail = blog.find((data) => data.id === id);
+  const blogDetail = blog.find((data: any) => data.id === id);
 
   if (!blogDetail) return null;
 
