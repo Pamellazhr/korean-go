@@ -29,7 +29,7 @@ function AdminContact() {
           </tr>
         </thead>
         <tbody>
-          {contact.map((data) => (
+          {contact.map((data: any) => (
             <tr key={data.time} className="bg-white border-b">
               <td className="px-6 py-4">{data.name}</td>
               <td className="px-6 py-4">{data.email}</td>
