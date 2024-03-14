@@ -86,7 +86,7 @@ function AdminBlog({ page }: { page: "home" | "new" }) {
             </div>
           ) : (
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {blog.map((data) => {
+              {blog.map((data: any) => {
                 return (
                   <Link
                     href={`/admin/blog/${data.id}`}

@@ -8,7 +8,7 @@ import { useFirebaseContext } from "../context/FirebaseProvider";
 function Blog() {
   const { blog } = useFirebaseContext();
 
-  const dividedBlog = blog.reduce((resultArray, item, index) => {
+  const dividedBlog = blog.reduce((resultArray: any, item: any, index: any) => {
     const chunkIndex = Math.floor(index / 3);
     if (!resultArray[chunkIndex]) {
       resultArray[chunkIndex] = [];

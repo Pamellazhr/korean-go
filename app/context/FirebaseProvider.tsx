@@ -1,20 +1,14 @@
 "use client";
 
-import {
-  collection,
-  DocumentData,
-  onSnapshot,
-  orderBy,
-  query,
-} from "firebase/firestore";
+import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import React, { useContext, useState, useEffect } from "react";
 import { db } from "../firebase";
 
 type FirebaseContextType = {
-  contact: DocumentData[];
-  setContact: React.Dispatch<React.SetStateAction<DocumentData[]>>;
-  blog: DocumentData[];
-  setBlog: React.Dispatch<React.SetStateAction<DocumentData[]>>;
+  contact: any;
+  setContact: React.Dispatch<React.SetStateAction<any>>;
+  blog: any;
+  setBlog: React.Dispatch<React.SetStateAction<any>>;
 };
 
 const FirebaseContext = React.createContext<FirebaseContextType>({
@@ -31,8 +25,8 @@ export const FirebaseProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [contact, setContact] = useState<DocumentData[]>([]);
-  const [blog, setBlog] = useState<DocumentData[]>([]);
+  const [contact, setContact] = useState<any>([]);
+  const [blog, setBlog] = useState<any>([]);
 
   useEffect(() => {
     const q = query(collection(db, "contact"), orderBy("time", "desc"));

@@ -47,11 +47,7 @@ function DetailBlogAdmin({ id }: { id: string }) {
     );
   }
 
-  const blogDetail = blog.find((data) => data.id === id);
-
-  useEffect(() => {
-    document.body.style.overflowY = isEdit ? "hidden" : "auto";
-  }, [isEdit]);
+  const blogDetail = blog.find((data: any) => data.id === id);
 
   if (!blogDetail) return null;
 
