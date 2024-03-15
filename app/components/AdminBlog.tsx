@@ -2,14 +2,15 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
 import { useFirebaseContext } from "../context/FirebaseProvider";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { db, storage } from "../firebase";
 import { useRouter } from "next/navigation";
 import { Plus } from "@phosphor-icons/react";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import "react-quill/dist/quill.snow.css";
+const ReactQuill =
+  typeof window === "object" ? require("react-quill") : () => false;
 
 function AdminBlog({ page }: { page: "home" | "new" }) {
   const router = useRouter();

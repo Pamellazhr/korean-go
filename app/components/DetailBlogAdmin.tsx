@@ -12,10 +12,11 @@ import {
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
-import ReactQuill from "react-quill";
+import React, { useState } from "react";
 import "react-quill/dist/quill.snow.css";
 import { db, storage } from "../firebase";
+const ReactQuill =
+  typeof window === "object" ? require("react-quill") : () => false;
 
 function DetailBlogAdmin({ id }: { id: string }) {
   const router = useRouter();

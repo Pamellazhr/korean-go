@@ -1,5 +1,3 @@
-"use client";
-
 import AdminBlog from "@/app/components/AdminBlog";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
