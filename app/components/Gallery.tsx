@@ -4,7 +4,7 @@ import React from "react";
 function Gallery() {
   return (
     <section id="gallery" className="mt-28 lg:mt-20 p-8 lg:p-16">
-      <h1 className="text-[#A32F3F] text-center font-bold text-2xl lg:text-3xl mb-12">
+      <h1 className="text-[#E19898] text-center font-bold text-2xl lg:text-3xl mb-12">
         360° Virtual Gallery
       </h1>
       <Link

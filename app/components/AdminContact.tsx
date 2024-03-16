@@ -11,7 +11,7 @@ function AdminContact() {
       id="admin-contact"
       className="mt-28 lg:mt-20 p-8 lg:p-16 relative overflow-x-auto"
     >
-      <h1 className="text-[#A32F3F] text-center font-bold text-2xl lg:text-3xl mb-12">
+      <h1 className="text-[#E19898] text-center font-bold text-2xl lg:text-3xl mb-12">
         List of Contacts
       </h1>
       <table className="w-full text-left text-gray-500">

@@ -62,7 +62,7 @@ function AdminBlog({ page }: { page: "home" | "new" }) {
 
   return (
     <section id="admin-blog" className="mt-28 lg:mt-20 p-8 lg:p-16">
-      <h1 className="text-[#A32F3F] text-center font-bold text-2xl lg:text-3xl mb-12">
+      <h1 className="text-[#E19898] text-center font-bold text-2xl lg:text-3xl mb-12">
         {page === "home" && "Blog"}
         {page === "new" && "New Blog"}
       </h1>
@@ -71,7 +71,7 @@ function AdminBlog({ page }: { page: "home" | "new" }) {
         <section id="home" className="relative">
           <Link
             href="/admin/blog/new"
-            className="p-2 bg-[#A32F3F] text-white rounded-md text-xl absolute -top-[5.5rem] right-0"
+            className="p-2 bg-[#E19898] text-white rounded-md text-xl absolute -top-[5.5rem] right-0"
           >
             <Plus weight="bold" />
           </Link>
@@ -80,7 +80,7 @@ function AdminBlog({ page }: { page: "home" | "new" }) {
               <h1>You haven't written any blog.</h1>
               <Link
                 href="/admin/blog/new"
-                className="px-4 py-2 bg-[#A32F3F] text-white rounded-md text-lg font-medium"
+                className="px-4 py-2 bg-[#E19898] text-white rounded-md text-lg font-medium"
               >
                 Add new blog
               </Link>
@@ -92,7 +92,7 @@ function AdminBlog({ page }: { page: "home" | "new" }) {
                   <Link
                     href={`/admin/blog/${data.id}`}
                     key={data.id}
-                    className="rounded-md bg-[#A32F3F] text-white p-4"
+                    className="rounded-md bg-[#E19898] text-white p-4"
                   >
                     <h3 className="text-xl font-medium mb-2">{data.title}</h3>
                     <h4 className="opacity-70">
@@ -122,7 +122,7 @@ function AdminBlog({ page }: { page: "home" | "new" }) {
             <div className="flex flex-col gap-4">
               <label
                 htmlFor="title"
-                className="text-xl font-medium text-[#A83949]"
+                className="text-xl font-medium text-[#E19898]"
               >
                 Title
               </label>
@@ -139,7 +139,7 @@ function AdminBlog({ page }: { page: "home" | "new" }) {
             <div className="flex flex-col gap-4">
               <label
                 htmlFor="place"
-                className="text-xl font-medium text-[#A83949]"
+                className="text-xl font-medium text-[#E19898]"
               >
                 Place
               </label>
@@ -156,14 +156,14 @@ function AdminBlog({ page }: { page: "home" | "new" }) {
             <div className="flex flex-col gap-4">
               <label
                 htmlFor="thumbnail"
-                className="text-xl font-medium text-[#A83949]"
+                className="text-xl font-medium text-[#E19898]"
               >
                 Thumbnail
               </label>
               <input type="file" onChange={uploadFile} id="thumbnail" />
             </div>
             <div className="flex flex-col gap-4">
-              <label className="text-xl font-medium text-[#A83949]">
+              <label className="text-xl font-medium text-[#E19898]">
                 Content
               </label>
               <ReactQuill
@@ -197,7 +197,7 @@ function AdminBlog({ page }: { page: "home" | "new" }) {
                   setQuillValue("");
                   router.push("/admin/blog");
                 }}
-                className="px-4 py-2 bg-[#A32F3F] text-white rounded-md text-lg font-medium"
+                className="px-4 py-2 bg-[#E19898] text-white rounded-md text-lg font-medium"
               >
                 Add
               </button>

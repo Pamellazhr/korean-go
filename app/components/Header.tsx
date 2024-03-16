@@ -50,7 +50,7 @@ function Header({ transparent }: { transparent?: boolean }) {
       className={`${style.style1} fixed inset-x-0 top-0 px-8 lg:px-16 flex items-center justify-between duration-300 ease-linear font-medium z-40`}
     >
       <Link href="/" className="font-bold text-2xl">
-        Japan<span className="text-[#A32F3F]">Trip</span>
+        Korean<span className="text-[#E19898]">Go</span>
       </Link>
       <div className="lg:flex gap-8 hidden">
         <Link

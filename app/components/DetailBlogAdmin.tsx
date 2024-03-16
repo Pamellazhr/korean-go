@@ -66,7 +66,7 @@ function DetailBlogAdmin({ id }: { id: string }) {
               <div className="flex flex-col gap-4">
                 <label
                   htmlFor="title"
-                  className="text-xl font-medium text-[#A83949]"
+                  className="text-xl font-medium text-[#E19898]"
                 >
                   Title
                 </label>
@@ -83,7 +83,7 @@ function DetailBlogAdmin({ id }: { id: string }) {
               <div className="flex flex-col gap-4">
                 <label
                   htmlFor="place"
-                  className="text-xl font-medium text-[#A83949]"
+                  className="text-xl font-medium text-[#E19898]"
                 >
                   Place
                 </label>
@@ -100,14 +100,14 @@ function DetailBlogAdmin({ id }: { id: string }) {
               <div className="flex flex-col gap-4">
                 <label
                   htmlFor="thumbnail"
-                  className="text-xl font-medium text-[#A83949]"
+                  className="text-xl font-medium text-[#E19898]"
                 >
                   Thumbnail
                 </label>
                 <input type="file" onChange={uploadFile} id="thumbnail" />
               </div>
               <div className="flex flex-col gap-4">
-                <label className="text-xl font-medium text-[#A83949]">
+                <label className="text-xl font-medium text-[#E19898]">
                   Content
                 </label>
                 <ReactQuill
@@ -143,7 +143,7 @@ function DetailBlogAdmin({ id }: { id: string }) {
                   setQuillValue("");
                   router.push("/admin/blog");
                 }}
-                className="px-4 py-2 bg-[#A32F3F] text-white rounded-md text-lg font-medium"
+                className="px-4 py-2 bg-[#E19898] text-white rounded-md text-lg font-medium"
               >
                 Update
               </button>
@@ -155,14 +155,14 @@ function DetailBlogAdmin({ id }: { id: string }) {
       <div className="mb-16 flex justify-between">
         <Link
           href="/admin/blog"
-          className="border-2 border-[#A32F3F] px-4 py-2 rounded-md text-[#A32F3F] text-lg font-medium"
+          className="border-2 border-[#E19898] px-4 py-2 rounded-md text-[#E19898] text-lg font-medium"
         >
           Back
         </Link>
         <div className="flex gap-4">
           <button
             onClick={() => setIsEdit(true)}
-            className="bg-[#A32F3F] px-4 py-2 rounded-md text-white text-lg font-medium"
+            className="bg-[#E19898] px-4 py-2 rounded-md text-white text-lg font-medium"
           >
             Edit
           </button>
@@ -177,7 +177,7 @@ function DetailBlogAdmin({ id }: { id: string }) {
                   alert(error);
                 });
             }}
-            className="bg-[#A32F3F] px-4 py-2 rounded-md text-white text-lg font-medium"
+            className="bg-[#E19898] px-4 py-2 rounded-md text-white text-lg font-medium"
           >
             Delete
           </button>

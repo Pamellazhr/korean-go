@@ -105,7 +105,7 @@ function Photo360({ id }: { id: string }) {
   return (
     <div className="h-screen-relative">
       <div className="h-full w-full absolute" ref={panoRef}></div>
-      <div className="absolute bottom-0 inset-x-0 h-16 bg-white flex items-center text-[#A32F3F] rounded-tl-[45px] font-medium px-8 text-lg">
+      <div className="absolute bottom-0 inset-x-0 h-16 bg-white flex items-center text-[#E19898] rounded-tl-[45px] font-medium px-8 text-lg">
         <Link href="/gallery" className="flex items-center gap-2">
           <CaretLeft size={32} />
           <span>Back to gallery</span>

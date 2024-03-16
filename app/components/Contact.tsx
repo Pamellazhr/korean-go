@@ -28,11 +28,11 @@ function Contact() {
 
   return (
     <section id="contact" className="px-8 py-24 lg:w-[650px] lg:mx-auto">
-      <h1 className="text-3xl font-semibold mb-12 text-[#A83949] text-center">
+      <h1 className="text-3xl font-semibold mb-12 text-[#E19898] text-center">
         Contact Us
       </h1>
       <div className="flex flex-col gap-4 mb-8">
-        <label htmlFor="name" className="text-xl font-medium text-[#A83949]">
+        <label htmlFor="name" className="text-xl font-medium text-[#E19898]">
           Name
         </label>
         <input
@@ -44,7 +44,7 @@ function Contact() {
             setInputValue({ ...inputValue, name: e.target.value })
           }
         />
-        <label htmlFor="email" className="text-xl font-medium text-[#A83949]">
+        <label htmlFor="email" className="text-xl font-medium text-[#E19898]">
           Email
         </label>
         <input
@@ -56,7 +56,7 @@ function Contact() {
             setInputValue({ ...inputValue, email: e.target.value })
           }
         />
-        <label htmlFor="message" className="text-xl font-medium text-[#A83949]">
+        <label htmlFor="message" className="text-xl font-medium text-[#E19898]">
           Message
         </label>
         <textarea
@@ -85,7 +85,7 @@ function Contact() {
           });
           router.push("/admin/contact");
         }}
-        className="py-4 rounded-md text-white bg-[#A83949] w-full font-medium text-lg"
+        className="py-4 rounded-md text-white bg-[#E19898] w-full font-medium text-lg"
       >
         Submit
       </button>

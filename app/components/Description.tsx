@@ -21,17 +21,17 @@ function Description() {
           priority
           className="lg:w-[450px] lg:h-[470px] object-cover"
         />
-        <h1 className="text-[3rem] font-black text-[#A32F3F] py-8 leading-[1.25] w-[750px] hidden lg:block">
+        <h1 className="text-[3rem] font-black text-[#E19898] py-8 leading-[1.25] w-[750px] hidden lg:block">
           <span
             style={{
               WebkitTextFillColor: "transparent",
               WebkitTextStrokeWidth: "1.5px",
             }}
           >
-            Experience adventures
+            Exclusive Journey
           </span>
           <br />
-          with handpicked departures to hidden gems across Japan.
+          with handpicked departures to hidden gems across Korea.
         </h1>
       </div>
       <div className="z-10 relative float-end -translate-y-24 lg:-translate-y-48 lg:flex items-center gap-16">
@@ -50,7 +50,7 @@ function Description() {
           destinations, that are mutually beneficial to all involved.
         </p>
       </div>
-      <h1 className="text-3xl font-black text-[#A32F3F] leading-[1.1] mb-8 lg:hidden z-10 relative">
+      <h1 className="text-3xl font-black text-[#E19898] leading-[1.1] mb-8 lg:hidden z-10 relative">
         <span
           className="text-4xl"
           style={{
@@ -58,10 +58,10 @@ function Description() {
             WebkitTextStrokeWidth: "1.5px",
           }}
         >
-          Experience adventures
+          Exclusive Journey
         </span>
         <br />
-        with handpicked departures to hidden gems across Japan.
+        with handpicked departures to hidden gems across Korean.
       </h1>
       <p className="text-[#363939] lg:hidden z-10 relative">
         We specialise in providing curious travellers with access to regions and

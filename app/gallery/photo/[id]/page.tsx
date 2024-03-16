@@ -5,7 +5,7 @@ function page({ params }: { params: { id: string } }) {
   return (
     <Suspense
       fallback={
-        <div className="w-full h-screen flex items-center justify-center text-3xl font-semibold text-[#A32F3F]">
+        <div className="w-full h-screen flex items-center justify-center text-3xl font-semibold text-[#E19898]">
           <span>Loading Image...</span>
         </div>
       }

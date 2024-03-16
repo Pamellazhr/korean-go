@@ -28,10 +28,10 @@ function Footer() {
       <div className="mb-16 lg:mb-48 lg:flex gap-60">
         <div className="flex flex-col gap-4 items-center lg:items-start mb-16 lg:mb-0">
           <h3 className="text-3xl lg:text-4xl font-semibold">
-            Japan<span className="text-[#A83949]">Trip</span>
+            Korean<span className="text-[#E19898]">Go</span>
           </h3>
           <p className="font-light lg:text-lg">
-            Your Seamless Gateway to <br /> Japanese Adventures!
+            Your Seamless Gateway to <br /> Korean Adventures!
           </p>
         </div>
         <div className="lg:flex gap-32">
@@ -64,7 +64,7 @@ function Footer() {
         </Link>
       </div>
       <p className="opacity-50 text-center">
-        © {new Date().getFullYear()} JapanTrip. All rights reserved.
+        © {new Date().getFullYear()} KoreanGo. All rights reserved.
       </p>
     </section>
   );

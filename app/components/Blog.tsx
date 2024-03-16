@@ -21,7 +21,7 @@ function Blog() {
 
   return (
     <section id="blog" className="mt-28 lg:mt-20 p-8 lg:p-16">
-      <h1 className="text-[#A32F3F] text-center font-bold text-2xl lg:text-3xl mb-12">
+      <h1 className="text-[#E19898] text-center font-bold text-2xl lg:text-3xl mb-12">
         Our Blog
       </h1>
       {dividedBlog.length === 0 ? (
@@ -30,7 +30,7 @@ function Blog() {
         <div className="space-y-12 mb-16 lg:mb-24">
           {dividedBlog[page].map((data: any) => (
             <div key={data.title} className="flex flex-col gap-4">
-              <h3 className="text-[#A32F3F] font-semibold text-xl lg:text-2xl">
+              <h3 className="text-[#E19898] font-semibold text-xl lg:text-2xl">
                 {data.place}
               </h3>
               <hr className="border border-[#36393930]" />
@@ -76,7 +76,7 @@ function Blog() {
               key={data[0].id}
               className={`${
                 page === index
-                  ? "bg-[#A32F3F] text-white"
+                  ? "bg-[#E19898] text-white"
                   : "bg-transparent text-black"
               } rounded-md w-[40px] h-[44px] text-lg flex items-center justify-center`}
               onClick={() => setPage(index)}

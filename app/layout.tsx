@@ -10,8 +10,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "JapanTrip | Exclusive Journey to Japan",
-  description: "JapanTrip | Exclusive Journey to Japan",
+  title: "KoreanGo | Unique Adventures to Korea",
+  description: "KoreanGo | Unique Adventures to Korea",
 };
 
 export default function RootLayout({

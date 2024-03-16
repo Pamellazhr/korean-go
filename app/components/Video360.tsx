@@ -24,7 +24,7 @@ function Video360({ id }: { id: string }) {
 
   return (
     <div className="h-screen relative">
-      <div className="absolute top-0 inset-x-0 h-[3.75rem] bg-white flex items-center text-[#A32F3F] rounded-bl-[45px] font-medium px-8 text-lg">
+      <div className="absolute top-0 inset-x-0 h-[3.75rem] bg-white flex items-center text-[#E19898] rounded-bl-[45px] font-medium px-8 text-lg">
         <Link href="/gallery" className="flex items-center gap-2">
           <CaretLeft size={32} />
           <span>Back to gallery</span>

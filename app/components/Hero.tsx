@@ -12,7 +12,7 @@ function Hero() {
     {
       title: "Town Cape Capturing",
       subtitle: "Photogenic cities on the planet one of the most.",
-      bg: "bg-[url('/hc-2.jpeg')]",
+      bg: "bg-[url('/hc-2.png')]",
     },
     {
       title: "Cape Capturing Town",
@@ -22,7 +22,7 @@ function Hero() {
     {
       title: "Nowt Epac Gnirutpac",
       subtitle: "The most photogenic cities on the planet one of.",
-      bg: "bg-[url('/hc-4.png')]",
+      bg: "bg-[url('/hc-4.jpg')]",
     },
   ];
   const maxIndex = CAROUSEL_DATA.length - 1;
@@ -63,10 +63,6 @@ function Hero() {
           >
             <div className="absolute inset-0 bg-black/75"></div>
             <div className="z-10 space-y-4">
-              <h2 className="font-semibold text-lg">
-                EXCLUSIVE JOURNEY TO{" "}
-                <span className="text-[#A32F3F]">JAPAN</span>
-              </h2>
               <h1 className="font-bold text-3xl lg:text-5xl">{data.title}</h1>
               <h3 className="lg:text-xl">{data.subtitle}</h3>
             </div>

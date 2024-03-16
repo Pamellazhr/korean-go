@@ -22,7 +22,7 @@ function MobileNavbar() {
           }}
           className="font-bold text-2xl"
         >
-          Japan<span className="text-[#A32F3F]">Trip</span>
+          Korean<span className="text-[#E19898]">Go</span>
         </button>
         <button onClick={() => setMobileNavbar(false)}>
           <X size={32} />
@@ -34,13 +34,13 @@ function MobileNavbar() {
             window.scrollTo({ top: 0, behavior: "smooth" });
             setMobileNavbar(false);
           }}
-          className="border-b border-[#A83949] text-center pb-4"
+          className="border-b border-[#E19898] text-center pb-4"
         >
           Home
         </button>
         <a
           href="/gallery"
-          className="border-b border-[#A83949] text-center pb-4"
+          className="border-b border-[#E19898] text-center pb-4"
           onClick={() => {
             setMobileNavbar(false);
           }}
@@ -49,7 +49,7 @@ function MobileNavbar() {
         </a>
         <a
           href="/blog"
-          className="border-b border-[#A83949] text-center pb-4"
+          className="border-b border-[#E19898] text-center pb-4"
           onClick={() => {
             setMobileNavbar(false);
           }}
