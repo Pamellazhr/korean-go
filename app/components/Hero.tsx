@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 function Hero() {
   const CAROUSEL_DATA = [
     {
-      title: "Capturing Cape Town",
+      title: "Capturing Korean Cape Town",
       subtitle: "One of the most photogenic cities on the planet.",
       bg: "bg-[url('/hc-1.jpg')]",
     },
